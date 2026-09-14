@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GS1 ScanVortex — GS1 barcode scanner and generator for Android</title>
+<meta name="description" content="GS1 ScanVortex is a GS1 barcode scanner and analyser for Android: reads GS1-128, GS1 DataMatrix and GS1 QR, splits the payload into application identifiers, validates it and generates codes. On Google Play as GS1 Scanner &amp; Generator.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#031020">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" hreflang="pl" href="../index.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GS1 ScanVortex — GS1 barcode scanner and generator">
+<meta property="og:description" content="Read and analyse GS1 barcodes on Android. On Google Play as GS1 Scanner &amp; Generator.">
+<meta property="og:locale" content="en_GB">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="shell head-row">
+    <a class="logo" href="index.html">
+      <span class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><g fill="#fff"><rect x="3" y="3" width="2.4" height="18" rx=".8"/><rect x="6.9" y="3" width="1.2" height="18" rx=".6"/><rect x="9.6" y="3" width="2.4" height="18" rx=".8"/><rect x="13.5" y="3" width="1.2" height="18" rx=".6"/><rect x="16.2" y="3" width="1.8" height="18" rx=".7"/><rect x="19.5" y="3" width="1.5" height="18" rx=".7"/></g></svg>
+      </span>
+      GS1 ScanVortex
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#gs1">GS1</a>
+      <a href="#about">About</a>
+      <a href="privacy.html">Privacy</a>
+      <span class="lang">
+        <a href="../index.html" hreflang="pl">PL</a>
+        <a href="index.html" aria-current="true" hreflang="en">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ------------------------------------------------------------- hero -->
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">Android · GS1 standard</p>
+        <h1>GS1 ScanVortex</h1>
+        <p class="h1-sub">A barcode is not a string of digits here. It is a set of business fields.</p>
+        <p class="lead">
+          A GS1 barcode scanner and analyser. It reads GS1-128, GS1 DataMatrix and GS1 QR,
+          splits the payload into application identifiers, checks the structure and the values,
+          and shows the result as readable fields: GTIN, expiry date, batch number,
+          serial number. Everything is computed on the device.
+        </p>
+
+        <p class="store-note">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" stroke="#5B8DFF" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.8 12 2.3 2.3 4.4-4.6" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>
+            <strong>GS1 ScanVortex</strong> is the product name.
+            On Google Play the application is available as
+            <strong>GS1 Scanner &amp; Generator</strong>.
+          </span>
+        </p>
+
+        <p class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.scanvertex.gs1" rel="noopener noreferrer" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.1a1 1 0 0 0-.6.9v18a1 1 0 0 0 .6.9l10-9.9-10-9.9Zm11.5 8.4L5.6 1.2 17 7.6l-1.9 2.9Zm0 3 1.9 2.9L5.6 22.8l9.5-9.3ZM18.5 8.5l2.9 1.7a1.6 1.6 0 0 1 0 2.8l-2.9 1.7-2-3.1 2-3.1Z"/></svg>
+            Get it on Google Play
+          </a>
+          <a class="btn btn-ghost" href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+
+      <!-- Illustration: scan frame and parsed fields. Pure SVG and CSS. -->
+      <div class="scan-art" aria-hidden="true">
+        <div class="scan-frame">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <span class="scan-line"></span>
+          <svg class="bars" viewBox="0 0 280 88" role="presentation">
+            <g fill="#CCE0FF">
+              <rect x="6" y="4" width="4" height="80"/><rect x="14" y="4" width="2" height="80"/>
+              <rect x="21" y="4" width="6" height="80"/><rect x="32" y="4" width="2" height="80"/>
+              <rect x="39" y="4" width="3" height="80"/><rect x="47" y="4" width="7" height="80"/>
+              <rect x="59" y="4" width="2" height="80"/><rect x="66" y="4" width="4" height="80"/>
+              <rect x="75" y="4" width="2" height="80"/><rect x="82" y="4" width="6" height="80"/>
+              <rect x="93" y="4" width="3" height="80"/><rect x="101" y="4" width="2" height="80"/>
+              <rect x="108" y="4" width="5" height="80"/><rect x="118" y="4" width="2" height="80"/>
+              <rect x="125" y="4" width="3" height="80"/><rect x="133" y="4" width="6" height="80"/>
+              <rect x="144" y="4" width="2" height="80"/><rect x="151" y="4" width="4" height="80"/>
+              <rect x="160" y="4" width="2" height="80"/><rect x="167" y="4" width="7" height="80"/>
+              <rect x="179" y="4" width="2" height="80"/><rect x="186" y="4" width="3" height="80"/>
+              <rect x="194" y="4" width="5" height="80"/><rect x="204" y="4" width="2" height="80"/>
+              <rect x="211" y="4" width="4" height="80"/><rect x="220" y="4" width="2" height="80"/>
+              <rect x="227" y="4" width="6" height="80"/><rect x="238" y="4" width="3" height="80"/>
+              <rect x="246" y="4" width="2" height="80"/><rect x="253" y="4" width="5" height="80"/>
+              <rect x="263" y="4" width="2" height="80"/><rect x="270" y="4" width="4" height="80"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="parsed">
+          <p class="parsed-head"><span class="dot-ok"></span> Decoded · GS1-128</p>
+          <p class="ai-row"><span class="ai">(01)</span><span><span class="label">Global Trade Item Number</span><span class="value">05901234123457</span></span></p>
+          <p class="ai-row"><span class="ai">(17)</span><span><span class="label">Expiration date</span><span class="value">2025-12-31</span></span></p>
+          <p class="ai-row"><span class="ai">(10)</span><span><span class="label">Batch or lot number</span><span class="value">ABC123</span></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ numbers -->
+  <section aria-label="The application in numbers">
+    <div class="shell">
+      <div class="stats">
+        <p class="stat"><b>200+</b><span>application identifiers in the registry</span></p>
+        <p class="stat"><b>3</b><span>validation layers: structure, semantics, business rules</span></p>
+        <p class="stat"><b>0</b><span>data sent to the author's servers</span></p>
+        <p class="stat"><b>EN / PL</b><span>full interface in two languages</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- features -->
+  <section id="features">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="kicker">Features</p>
+        <h2>From a scanned code to usable data</h2>
+        <p>
+          The value of this application is not the scan itself, but what happens next:
+          interpreting the payload according to the GS1 standard.
+        </p>
+      </div>
+
+      <div class="grid cols-3">
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#5B8DFF" stroke-width="1.6"/><path d="M7 9v6M10 9v6M13.5 9v6M17 9v6" stroke="#00C8FF" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <h3>GS1 scanner</h3>
+          <p>
+            Camera scanning in single and batch mode, an aiming frame that narrows detection
+            to the centre of the view, torch, zoom and tap-to-focus.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h13" stroke="#5B8DFF" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="12" r="2.2" stroke="#00C8FF" stroke-width="1.6"/></svg></span>
+          <h3>Over 200 application identifiers</h3>
+          <p>
+            A registry of application identifiers with field names and formatting for dates,
+            ISO 3166-1 country codes and ISO 4217 currencies.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6.4v5c0 4.6 3.2 7.9 8 9.6 4.8-1.7 8-5 8-9.6v-5L12 3Z" stroke="#5B8DFF" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.8 12 2.3 2.3 4.2-4.6" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Three layers of validation</h3>
+          <p>
+            Structure, semantics and business rules. The message says what exactly is wrong —
+            with numbers, for example the received and the expected check digit.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="#5B8DFF" stroke-width="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="#5B8DFF" stroke-width="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="#5B8DFF" stroke-width="1.6"/><path d="M14 14h3v3h-3zM19 19h1.5v1.5H19z" fill="#00C8FF"/></svg></span>
+          <h3>Code generator</h3>
+          <p>
+            Creates GS1-128 and GS1 DataMatrix codes. A field wizard with quick-start sets,
+            a date picker, a country list and check digit assistance.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5h16M4 12h16M4 18.5h16" stroke="#5B8DFF" stroke-width="1.6" stroke-linecap="round"/><path d="M9 3.5v17" stroke="#00C8FF" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <h3>History and CSV export</h3>
+          <p>
+            Every scan lands in the history with a preview split into fields. CSV export
+            builds columns from the identifiers actually present in the data.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.4" stroke="#5B8DFF" stroke-width="1.6"/><path d="M12 7.4v5l3.2 1.9" stroke="#00C8FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Check digit calculator</h3>
+          <p>
+            MOD-10 for GTIN, SSCC, GLN and GSIN numbers — the same algorithm the validation
+            uses, so the suggestion can never disagree with the verdict.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M10 13.8a4 4 0 0 0 5.7 0l2.8-2.8a4 4 0 0 0-5.7-5.7l-1.1 1.1" stroke="#5B8DFF" stroke-width="1.6" stroke-linecap="round"/><path d="M14 10.2a4 4 0 0 0-5.7 0l-2.8 2.8a4 4 0 1 0 5.7 5.7l1.1-1.1" stroke="#00C8FF" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <h3>GS1 Digital Link</h3>
+          <p>
+            A GS1 Digital Link URL is converted into an identifier string and analysed
+            exactly like a code scanned from a package.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4.5" width="18" height="15" rx="3" stroke="#5B8DFF" stroke-width="1.6"/><circle cx="8.6" cy="9.6" r="1.7" stroke="#00C8FF" stroke-width="1.5"/><path d="m4.5 17.5 4.7-4.3 3.4 3 3-2.4 3.9 3.7" stroke="#00C8FF" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <h3>Photo and clipboard</h3>
+          <p>
+            A code can be read from a photo in the gallery, or a string copied to the
+            clipboard can be analysed — without reaching for the camera.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.6" width="12" height="18.8" rx="3" stroke="#5B8DFF" stroke-width="1.6"/><path d="M10.4 18h3.2" stroke="#00C8FF" stroke-width="1.6" stroke-linecap="round"/><path d="M9.2 8.4h5.6M9.2 11.4h3.4" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <h3>Works locally</h3>
+          <p>
+            Scanning, validation and generation all run on the device. The history stays
+            in the phone's storage and is never sent to the author's servers.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------------------- GS1 -->
+  <section id="gs1">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="kicker">GS1 standard</p>
+        <h2>Why an ordinary scanner is not enough</h2>
+        <p>
+          A GS1 code does not carry a single value. It carries several fields joined into one
+          string, separated by a character you cannot see on screen. Only splitting them
+          turns a scan into information.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <h3>Recognition</h3>
+          <p>
+            A GS1 code is recognised by the AIM prefix the reader adds to the scan and by the
+            FNC1 character in the data. A plain EAN-13 is never treated as GS1.
+          </p>
+        </article>
+        <article class="step">
+          <h3>Splitting into fields</h3>
+          <p>
+            The string is divided into application identifiers and their values, respecting
+            fixed-length and variable-length fields and their separators.
+          </p>
+        </article>
+        <article class="step">
+          <h3>Checking</h3>
+          <p>
+            Every field is checked for data type, length, check digit, date validity and
+            dependency rules between fields. The result gets one of three states.
+          </p>
+        </article>
+      </div>
+
+      <p class="callout" style="margin-top:22px">
+        <strong>An honest note on scope:</strong> GS1 ScanVortex is a tool for reading,
+        analysing and generating codes. It is not a print quality verifier, it does not
+        certify conformance with the standard and it does not replace measuring equipment.
+      </p>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------- about -->
+  <section id="about">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="kicker">About</p>
+        <h2>Built around a single standard</h2>
+        <p>
+          GS1 ScanVortex was made for people who work with logistic labels and packaging
+          every day: warehouses, production, goods receiving and quality control.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Platform</h3>
+          <p>
+            Android 8.0 or newer. The application is published on Google Play
+            under the name <strong>GS1 Scanner &amp; Generator</strong>.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Ads and consent</h3>
+          <p>
+            The application shows Google AdMob ads. Consent is collected by Google's certified
+            platform (UMP) and can be changed at any time in Settings. The details are in the
+            <a href="privacy.html">privacy policy</a>.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------------- CTA -->
+  <section>
+    <div class="shell">
+      <div class="cta-band">
+        <h2>See what is really inside the code</h2>
+        <p>
+          Scan a label and see its content split into fields — GTIN, date, batch,
+          serial number — together with a verdict on its correctness.
+        </p>
+        <p class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.scanvertex.gs1" rel="noopener noreferrer" target="_blank">
+            Get GS1 Scanner &amp; Generator
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h2>Product</h2>
+        <a class="logo" href="index.html">
+          <span class="glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><g fill="#fff"><rect x="3" y="3" width="2.4" height="18" rx=".8"/><rect x="6.9" y="3" width="1.2" height="18" rx=".6"/><rect x="9.6" y="3" width="2.4" height="18" rx=".8"/><rect x="13.5" y="3" width="1.2" height="18" rx=".6"/><rect x="16.2" y="3" width="1.8" height="18" rx=".7"/><rect x="19.5" y="3" width="1.5" height="18" rx=".7"/></g></svg>
+          </span>
+          GS1 ScanVortex
+        </a>
+        <p>
+          Published on Google Play as <strong>GS1 Scanner &amp; Generator</strong>.
+          A GS1 barcode scanner, analyser and generator for Android.
+        </p>
+      </div>
+
+      <div>
+        <h2>Site</h2>
+        <ul class="foot-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gs1">GS1 standard</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <ul class="foot-list">
+          <li><a href="mailto:grzegorzgronski.dev@gmail.com">grzegorzgronski.dev@gmail.com</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.scanvertex.gs1" rel="noopener noreferrer" target="_blank">Google Play</a></li>
+          <li><a href="../index.html" hreflang="pl">Wersja polska</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="foot-bottom">
+      <span>© 2026 GS1 ScanVortex</span>
+      <span>GS1® is a trademark of GS1. This application is not affiliated with it.</span>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
